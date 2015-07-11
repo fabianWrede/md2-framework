@@ -21,7 +21,6 @@ import java.util.List
 import java.util.Map
 import java.util.Set
 import org.eclipse.emf.ecore.resource.ResourceSet
-import org.eclipse.xtend.lib.Property
 
 import static de.wwu.md2.framework.generator.util.MD2GeneratorUtil.*
 
@@ -35,53 +34,38 @@ class DataContainer
 	// Data Container
 	///////////////////////////////////////
 	
-	@Property
-	private Collection<View> views
+	public Collection<View> views
 	
-	@Property
-	private Collection<Controller> controllers
+	public Collection<Controller> controllers
 	
-	@Property
-	private Collection<Model> models
+	public Collection<Model> models
 	
-	@Property
-	private Main main
+	public Main main
 	
-	@Property
-	private Set<ContainerElement> viewContainers
+	public Set<ContainerElement> viewContainers
 	
-	@Property
-	private Collection<ContentProvider> contentProviders
+	public Collection<ContentProvider> contentProviders
 	
-	@Property
-	private Collection<Workflow> workflows
+	public Collection<Workflow> workflows
 	
-	@Property
-	private Collection<CustomAction> customActions
+	public Collection<CustomAction> customActions
 	
-	@Property
-	private Collection<OnConditionEvent> onConditionEvents
+	public Collection<OnConditionEvent> onConditionEvents
 	
-	@Property
-	private Collection<RemoteValidator> remoteValidators
+	public Collection<RemoteValidator> remoteValidators
 	
 	/*
 	 * Contains a collection of all conditions, where the key represents the name of the condition
 	 */
-	@Property
-	private Map<String, Condition> conditions
+	public Map<String, Condition> conditions
 	
-	@Property
-	private TabbedAlternativesPane tabbedAlternativesPane
+	public TabbedAlternativesPane tabbedAlternativesPane
 	
-	@Property
-	private List<ContainerElement> tabbedViewContent
+	public List<ContainerElement> tabbedViewContent
 	
-	@Property
-	private Set<ContainerElement> viewContainersInAnyAlternativesPane
+	public Set<ContainerElement> viewContainersInAnyAlternativesPane
 	
-	@Property
-	private Set<ContainerElement> viewContainersNotInAnyAlternativesPane
+	public Set<ContainerElement> viewContainersNotInAnyAlternativesPane
 	
 	
 	/**

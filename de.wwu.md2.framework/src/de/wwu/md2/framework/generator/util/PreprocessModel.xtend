@@ -301,10 +301,12 @@ class PreprocessModel {
 		var repeat = true
 		val Collection<ViewElementRef> viewRefsDone = newHashSet()
 		while (repeat) {
-			val Iterable<ViewElementRef> viewRefs = workingInput.resources.map(r|r.allContents.toIterable.filter(typeof(ViewElementRef))).flatten.toList.sort(
+			val Iterable<ViewElementRef> viewRefs = workingInput.resources.map(r|r.allContents.toIterable.filter(typeof(ViewElementRef))).flatten.toList.sortWith(
 				[obj1, obj2 |
 					return countContainers(obj2,0)-countContainers(obj1,0)
-				])
+				]
+				)
+				
 			val size = viewRefsDone.size 
 			viewRefs.forEach [ viewRef |
 				if (!viewRefsDone.contains(viewRef)) {

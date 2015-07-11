@@ -38,10 +38,9 @@ class LayoutXml {
 	
 	boolean isRootGenerated
 	
-	StringsXmlTemplate strings
+	StringsXmlTemplate strings	
 	
-	@Property
-	Collection<ContainerElement> newFragmentsToGenerate
+	public Collection<ContainerElement> newFragmentsToGenerate
 		
 	new(StringsXmlTemplate stringsTemplate) {
 		isRootGenerated = false

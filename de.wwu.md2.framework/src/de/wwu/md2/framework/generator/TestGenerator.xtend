@@ -76,12 +76,13 @@ class TestGenerator extends AbstractPlatformGenerator {
 			ContentElement: "["+obj.eClass.name+ "] " + obj.name + "\n"
 			default: ""
 		}
-		val objs = obj.eContents.sort(
-			[EObject obj1, EObject obj2 |
+		
+		val objs = obj.eContents.sortWith([EObject obj1, EObject obj2 |
 				if (obj1 instanceof ContainerElement && obj2 instanceof ContentElement) return 1
 				else if (obj2 instanceof ContainerElement && obj1 instanceof ContentElement) return -1
 				else return 0
-			])
+			])			
+		
 		for (child : objs) {
 			output = output + traverse(child);
 		}

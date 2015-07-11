@@ -1,12 +1,10 @@
 package de.wwu.md2.framework.generator.android.util
 
-import org.eclipse.xtend.lib.Property
-
 class JavaClassDef {
-	@Property String simpleName
-	@Property String basePackage
-	@Property String subPackage
-	@Property CharSequence contents
+	public String simpleName
+	public String basePackage
+	public String subPackage
+	public CharSequence contents
 	
 	def getName() {
 		fullPackage + "." + simpleName
@@ -17,7 +15,7 @@ class JavaClassDef {
 	}
 	
 	def void setSimpleName(String value) {
-		_simpleName = value.toFirstUpper
+		simpleName = value.toFirstUpper
 	}
 	
 	def getFullPackage() {

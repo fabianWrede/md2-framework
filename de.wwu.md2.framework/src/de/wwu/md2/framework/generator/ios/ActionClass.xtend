@@ -499,7 +499,6 @@ class ActionClass
 				result.add(switch action
 				{
 					GotoWorkflowStepAction: "GotoWorkflowStepEvent"
-					GotoWorkflowStepAction: "GotoControllerEvent"
 					DataAction: switch action.operation
 					{
 							case AllowedOperation::CREATE_OR_UPDATE: "PersistEvent"
